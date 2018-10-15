@@ -1,0 +1,11 @@
+{
+    "name": "pebble-test-koa",
+    "main": "app/index.js",
+    "scripts": {},
+    "dependencies": {
+        "koa": "latest",
+        "koa-router": "latest",
+        "react": "latest",
+        "react-dom": "latest"
+    }
+}
