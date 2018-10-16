@@ -14,6 +14,12 @@ and install all dependencies:
 npm i
 ```
 
+To bundle, install parcel: 
+
+``` shell
+npm i -g parcel
+```
+
 Bundle:
 
 ``` shell
