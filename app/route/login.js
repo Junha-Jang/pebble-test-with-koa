@@ -7,8 +7,6 @@ module.exports = async (ctx, next) => {
         });
     }
 
-    console.log(ctx);
-
     const user = await ctx.collection.findOne({
         email: ctx.request.body.email
     });
