@@ -13,6 +13,7 @@
     },
     "dependencies": {
         "koa": "latest",
+        "koa-body": "latest",
         "koa-router": "latest",
         "koa-static": "latest",
         "koa-mount": "latest",
