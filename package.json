@@ -15,8 +15,12 @@
         "koa": "latest",
         "koa-body": "latest",
         "koa-router": "latest",
+        "koa-session": "latest",
         "koa-static": "latest",
         "koa-mount": "latest",
+        "mongodb": "latest",
+        "dotenv": "latest",
+        "bcrypt": "latest",
         "react": "latest",
         "react-dom": "latest"
     }
