@@ -4,16 +4,48 @@
 Clone this repository: 
 
 ``` shell
-git clone https://github.com/SSHS-pebble/pebble-test-with-koa.git`
+git clone https://github.com/SSHS-pebble/pebble-test-with-koa.git
+cd pebble-test-with-koa
 ```
+
 and install all dependencies:
+
 ``` shell
 npm i
 ```
 
+Bundle:
+
+``` shell
+npm run build
+```
+
+and start server:
+
+``` shell
+node ./app/index.js
+```
+
+[The app](http://localhost:8888) runs on port 8888 on localhost.
+
+### Frontend
+
+The frontend files directory is `/app/view`. Parcel bundling with babel is configured to output files in `app/view/dist`.
+Bundling while developing: 
+
+``` shell
+npm run dev-build
+```
+
+Building when deploying:
+
+``` shell
+npm run build
+```
+
 ## Project setup
+
 `/app/` is the app's main directory. A directory `/test/` will be made in the future for testing purposes.
 `/app/route` is the app's routes. `/app/view` is the app's main page.
 
-The app from `/app/view` is a SPA and dynamically reloads data from the routes from `/app/route`.
-The DB for `/app/route` will be saved in an `.env` file.
+The app from `/app/view` is a SPA and dynamically reloads data by requesting from APIs, mounted on `/api`.
