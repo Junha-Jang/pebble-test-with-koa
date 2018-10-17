@@ -28,6 +28,13 @@ node ./app/index.js
 
 [The app](http://localhost:8000) runs on port 8000 on localhost.
 
+You need an env file in the `./` directory. The format is like this:
+
+``` shell
+PEBBLE_DB_USER="pebble-db-user"
+PEBBLE_DB_PW="pebble-db-pw"
+```
+
 ### Frontend
 
 The frontend files directory is `/app/view`. Parcel bundling with babel is configured to output files in `app/view/dist`.
