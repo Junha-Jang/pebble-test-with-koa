@@ -6,7 +6,7 @@ const middleware = require("./middleware/index.js");
 
 const api = new Koa();
 
-api.use(async (ctx, next) => {
+api.use(middleware.handleError).use(async (ctx, next) => {
     ctx.body = {};
     await next();
 }).use(koaBody()).use(middleware.saveCollection).use(router.routes()).use(router.allowedMethods());

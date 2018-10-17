@@ -2,9 +2,7 @@ const bcrypt = require("bcrypt");
 
 module.exports = async (ctx, next) => {
     if(!ctx.request.body.email || !ctx.request.body.password) {
-        ctx.throw(400, {
-            status: "Bad Request"
-        });
+        throw new Error(400);
     }
 
     const user = await ctx.collection.findOne({
@@ -15,9 +13,7 @@ module.exports = async (ctx, next) => {
         ctx.session.user = user._id;
         ctx.body.status = "success";
     } else {
-        ctx.throw(401, {
-            status: "Unauthorized"
-        });
+        throw new Error(401);
     }
 
     await next();
