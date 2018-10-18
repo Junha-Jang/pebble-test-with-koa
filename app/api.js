@@ -9,6 +9,6 @@ const api = new Koa();
 api.use(async (ctx, next) => {
     ctx.body = {};
     await next();
-}).use(koaBody()).use(middleware.saveCollection).use(router.routes()).use(router.allowedMethods());
+}).use(koaBody()).use(middleware.getDB).use(middleware.getUser).use(router.routes()).use(router.allowedMethods());
 
 module.exports = api;

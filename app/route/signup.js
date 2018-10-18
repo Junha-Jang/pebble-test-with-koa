@@ -5,7 +5,7 @@ module.exports = async (ctx, next) => {
         ctx.throw(400);
     }
     try {
-        await ctx.collection.insertOne({
+        await ctx.userCollection.insertOne({
             email: ctx.request.body.email,
             name: ctx.request.body.name,
             password: await bcrypt.hash(ctx.request.body.password, 10)

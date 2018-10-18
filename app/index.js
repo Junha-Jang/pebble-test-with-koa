@@ -1,7 +1,7 @@
 require("dotenv").config();
 const Koa = require("koa");
-const session = require("koa-session");
 const serve = require("koa-static");
+const session = require("koa-session");
 const mount = require("koa-mount");
 
 const api = require("./api.js");
